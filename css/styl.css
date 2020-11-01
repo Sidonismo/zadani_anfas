@@ -1,144 +1,230 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 * {
-    /* Typography */
-    --main-font: "Open Sans", sans-serif;
-    
-    /* Calculation */
-    --responsive: calc((var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420))); /* Ranges from 421px to 1199px */
-     transform: none !important;
- }
-  h1 {
-    /* Set max and min font sizes */
-    --max-font: 24;
-    --min-font: 20;
-    font-family: var(--main-font);
-    font-size: var(--responsive);
-  }
-  h2 {
-    /* Set max and min font sizes */
-    --max-font: 72;
-    --min-font: 32;
-    font-family: var(--main-font);
-    font-size: var(--responsive);
-    font-weight: bold;
-  }
-  h3 {
-    /* Set max and min font sizes */
-    --max-font: 20;
-    --min-font: 18;
-    font-family: var(--main-font);
-    font-size: var(--responsive);
-    font-weight: bold;
-    position: relative;
-    text-align: center;
-    margin: 4% auto;
-  }
+  /* Typography */
+  --main-font: "Open Sans", sans-serif;
+
+  /* Calculation */
+  --responsive: calc(
+    (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) *
+      ((100vw - 420px) / (1200 - 420))
+  ); /* Ranges from 421px to 1199px */
+  transform: none !important;
+}
+h1 {
+  /* Set max and min font sizes */
+  --max-font: 24;
+  --min-font: 20;
+  font-family: var(--main-font);
+  font-size: var(--responsive);
+}
+h2 {
+  /* Set max and min font sizes */
+  --max-font: 72;
+  --min-font: 32;
+  font-family: var(--main-font);
+  font-size: var(--responsive);
+  font-weight: bold;
+}
+h3 {
+  /* Set max and min font sizes */
+  --max-font: 20;
+  --min-font: 18;
+  font-family: var(--main-font);
+  font-size: var(--responsive);
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  margin: 4% auto;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  width: 55%;
+  display: block;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
   p {
-    font-family: 'Times New Roman', Times, serif;
-    margin: auto;
-    width: fit-content;
-    text-align: center;
-    width: 55%;
-    display: block;
-    text-align: center;
+    width: 85%;
   }
-    @media screen and (max-width: 767px) {
-      p {
-        width: 85%;
-      }
-    }
+}
 
-  #navbar-top li {
-    --max-font: 24;
-    --min-font: 20;
-    font-family: var(--main-font);
-    font-size: var(--responsive);
-    font-weight: bold;
+@media screen and (min-width: 1200px) {
+  h1,
+  h2,
+  h3,
+  #navbar-top li,
+  p {
+    font-size: calc(var(--max-font) * 1px);
   }
-  
-  @media screen and (min-width: 1200px) {
-    h1,h2,h3,#navbar-top li,
-    p {
-      font-size: calc(var(--max-font) * 1px);
-    }
+}
+
+@media screen and (max-width: 420px) {
+  h1,
+  h2,
+  h3,
+  #navbar-top li,
+  p {
+    font-size: calc(var(--min-font) * 1px);
   }
-  
-  @media screen and (max-width: 420px) {
-    h1,h2,h3,#navbar-top li,
-    p {
-      font-size: calc(var(--min-font) * 1px);
-    }
-  }
-  header {
-    width: 100%;
-    z-index: 10000;
-    background-color: #fff;
-    color: #000;
-    height: 70px;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    border-bottom: 1px dotted rgb(126, 142, 155);
-  }
+}
+header {
+  width: 100%;
+  z-index: 10000;
+  background-color: #fff;
+  color: #000;
+  height: 70px;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  border-bottom: 1px dotted rgb(126, 142, 155);
+}
+
 #navbar-top {
-    position: fixed !important;
-    width: 97%;
-    top: 0 !important;
-    left: 0 !important;
-  }
-  
-  #navbar-top {
-    background-color: #fff;
-    color: #000;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-family: "Open Sans", sans-serif;
-		z-index: 10000;
-    border-bottom: 1px dotted rgb(126, 142, 155);
-	}
+  position: fixed !important;
+  width: 97%;
+  top: 0 !important;
+  left: 0 !important;
+}
 
-  #navbar-top h1 {
-    left: 0.5em;
-    height: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 21px;
-  }
-  
-  #navbar-top ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  #navbar-top li {
-    margin-left: 0.5em;
-  }
-  
-  #navbar-top a {
-    text-decoration: none;
-    color: black;
-  }
+#navbar-top {
+  background-color: #fff;
+  color: #000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "Open Sans", sans-serif;
+  z-index: 10000;
+  border-bottom: 1px dotted rgb(126, 142, 155);
+}
+
+#navbar-top h1 {
+  left: 0.5em;
+  height: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 21px;
+}
+
+#navbar-top ul {
+  list-style: none;
+  display: flex;
+}
+
+#navbar-top li {
+  --max-font: 24;
+  --min-font: 20;
+  font-family: var(--main-font);
+  font-size: var(--responsive);
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+#navbar-top a {
+  text-decoration: none;
+  color: black;
+}
 
 #container {
-    display: block;
-margin: 0;
-padding: 0;
-  }
-  #navbar-top {
-    grid-area: header;
-  }
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#navbar-top {
+  grid-area: header;
+}
 #header-img {
   margin-top: 5vh;
   background-size: cover;
@@ -161,8 +247,8 @@ padding: 0;
 .oversizedImage {
   width: 50%;
   margin: auto;
-  box-shadow: 0 0 150px 100px white;/* you should use overflow:hidden; here it only shows how much is outside :) */
-  overflow:hidden;
+  box-shadow: 0 0 150px 100px white; /* you should use overflow:hidden; here it only shows how much is outside :) */
+  overflow: hidden;
 }
 
 .oversizedImage img {
@@ -191,22 +277,22 @@ padding: 0;
 }
 .obr-text {
   float: right;
-  padding: 0 0.5em 0 0.5em ;
+  padding: 0 0.5em 0 0.5em;
 }
 
 .column {
   padding-bottom: 20px;
   color: #424346;
-  background: #FFF;
-  box-shadow: 0 1px 6px rgba(0,0,0,.1);
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 .column h2,
- p {
+p {
   margin: 0;
   padding: 0 20px;
 }
 .column h2 {
-  margin: .75em 0 .5em;
+  margin: 0.75em 0 0.5em;
 }
 .column p {
   margin-bottom: 15px;
@@ -216,7 +302,7 @@ padding: 0;
 }
 .odsazeni {
   margin-left: 15px;
-  margin-right: 15px;	
+  margin-right: 15px;
 }
 .row .column img {
   width: 100%;
@@ -268,7 +354,7 @@ ul.icons {
   list-style: none;
   cursor: default;
   list-style: none;
-  margin:  0.5em 0.2em;
+  margin: 0.5em 0.2em;
 }
 
 ul.icons li {
@@ -283,7 +369,9 @@ ul.icons li:last-child {
 ul.icons li .icon:before {
   font-size: 1.5em;
 }
-.margin-top {margin-top: 3vh}
+.margin-top {
+  margin-top: 3vh;
+}
 .margin-bottom {
   margin-bottom: 8vh;
-} 
+}
