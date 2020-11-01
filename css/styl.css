@@ -157,6 +157,17 @@ p {
     font-size: calc(var(--min-font) * 1px);
   }
 }
+#window {
+  background-image: url('../img/anonymous.png');
+  position: relative;
+  margin: auto auto;
+  bottom: 20px;
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 64px;
+  z-index: 1200;
+  
+}
 header {
   width: 100%;
   z-index: 10000;
