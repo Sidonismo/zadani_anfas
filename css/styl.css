@@ -222,9 +222,7 @@ header {
   margin: 0;
   padding: 0;
 }
-#navbar-top {
-  grid-area: header;
-}
+
 #header-img {
   margin-top: 5vh;
   background-size: cover;
